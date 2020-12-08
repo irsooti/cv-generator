@@ -1,6 +1,6 @@
 {
   "name": "@irsooti/cv-generator",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "A tool for generating resumes",
   "scripts": {
     "test": "jest",
