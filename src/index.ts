@@ -10,7 +10,7 @@ import * as types from './types';
  * @param docType
  */
 export function prepareDocument(docType: types.DocType): string {
-  const inputPath = path.resolve(__dirname, `../templates/${docType}.docx`);
+  const inputPath = `../templates/${docType}.docx`;
   return fs.readFileSync(inputPath, 'binary');
 }
 
