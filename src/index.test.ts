@@ -15,7 +15,6 @@ describe('Testing prepareDocument', () => {
 describe('Generate the docx buffer', () => {
   test('should transform the template into a docx', () => {
     const doc = createDocument(employee, prepareDocument(DocType.reply));
-    backupCopy(doc, employee, DocType.reply);
     expect(doc).toBeInstanceOf(Buffer);
   });
 });
