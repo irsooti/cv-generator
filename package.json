@@ -1,5 +1,5 @@
 {
-  "name": "cv-generator",
+  "name": "@irsooti/cv-generator",
   "version": "1.0.0",
   "description": "A tool for generating resumes",
   "main": "build/index.js",
