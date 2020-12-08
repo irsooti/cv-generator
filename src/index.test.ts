@@ -1,4 +1,4 @@
-import { backupCopy, createDocument, prepareDocument } from '.';
+import { createDocument, prepareDocument } from '.';
 import { DocType } from './types';
 import employee from './__mocks__/employee.mock';
 

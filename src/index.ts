@@ -3,13 +3,13 @@ import fs from 'fs';
 import upperCase from 'lodash/upperCase';
 import path from 'path';
 import PizZip from 'pizzip';
-import { DocType, Employee } from './types';
+import * as types from './types';
 
 /**
  * Choose between the available templates
  * @param docType
  */
-export function prepareDocument(docType: DocType): string {
+export function prepareDocument(docType: types.DocType): string {
   const inputPath = path.resolve(__dirname, `./templates/${docType}.docx`);
   return fs.readFileSync(inputPath, 'binary');
 }
@@ -20,7 +20,7 @@ export function prepareDocument(docType: DocType): string {
  * @param templatePath The template used to create the final DOCX
  */
 export function createDocument(
-  employee: Employee,
+  employee: types.Employee,
   templatePath: string
 ): Buffer {
   const doc = new DocxTemplater();
@@ -41,8 +41,8 @@ export function createDocument(
  */
 export function backupCopy(
   document: Buffer,
-  employee: Employee,
-  docType: DocType
+  employee: types.Employee,
+  docType: types.DocType
 ): void {
   const outputFolder = path.resolve(__dirname, `../outputs/`);
   const outputPath = path.resolve(
@@ -52,3 +52,5 @@ export function backupCopy(
 
   return fs.writeFileSync(outputPath, document);
 }
+
+export { types };
