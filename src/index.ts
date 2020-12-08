@@ -3,6 +3,7 @@ import fs from 'fs';
 import upperCase from 'lodash/upperCase';
 import path from 'path';
 import PizZip from 'pizzip';
+export * from './types';
 import * as types from './types';
 
 /**
@@ -52,5 +53,3 @@ export function backupCopy(
 
   return fs.writeFileSync(outputPath, document);
 }
-
-export { types };
