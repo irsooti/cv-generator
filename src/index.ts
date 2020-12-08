@@ -10,10 +10,15 @@ import * as types from './types';
  * Choose between the available templates
  * @param docType
  */
-export function prepareDocument(docType: types.DocType): string {
+export function prepareTemplate(docType: types.DocType): string {
   const inputPath = path.resolve(__dirname, `../templates/${docType}.docx`);
   return fs.readFileSync(inputPath, 'binary');
 }
+
+/**
+ * @deprecated bad naming, use `prepareTemplate` instead
+ */
+export const prepareDocument = prepareTemplate;
 
 /**
  * It produces a Buffer you can use to download the DOCX
@@ -22,10 +27,10 @@ export function prepareDocument(docType: types.DocType): string {
  */
 export function createDocument(
   employee: types.Employee,
-  templatePath: string
+  template: string
 ): Buffer {
   const doc = new DocxTemplater();
-  const zip = new PizZip(templatePath);
+  const zip = new PizZip(template);
 
   doc.loadZip(zip);
   doc.setData(employee);
@@ -35,7 +40,7 @@ export function createDocument(
 }
 
 /**
- * It saves locally a generated document
+ * It saves locally a generated document.
  * @param document
  * @param employee
  * @param docType
