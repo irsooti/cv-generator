@@ -8,6 +8,7 @@
     "release": "np --no-publish --branch=main",
     "postinstall": "tsc"
   },
+  "main": "build/index.js",
   "keywords": [],
   "author": "Daniele Irsuti",
   "license": "ISC",
