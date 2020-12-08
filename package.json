@@ -5,8 +5,7 @@
   "scripts": {
     "test": "jest",
     "build": "tsc",
-    "release": "np --no-publish --branch=main",
-    "postinstall": "tsc"
+    "release": "np --no-publish --branch=main"
   },
   "main": "build/index.js",
   "keywords": [],
