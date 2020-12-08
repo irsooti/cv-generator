@@ -3,10 +3,10 @@ import { Employee, LanguageLevel, Sex } from '../types';
 const mockEmployee: Employee = {
   profile: {
     description: 'Computer Scientist & Software Developer',
-    name: 'Samuel Finocchio',
-    bornDate: '30-05-2020',
-    sex: Sex.male,
-    nationality: 'Italiana',
+    name: 'Famuel Sinocchio',
+    bornDate: '30-05-1990',
+    sex: Sex.female,
+    nationality: 'Belgio',
   },
   skills: [
     {
