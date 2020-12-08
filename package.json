@@ -6,6 +6,7 @@
   "scripts": {
     "test": "jest",
     "build": "tsc",
+    "postinstall": "npm run build",
     "release": "np --no-publish --branch=main"
   },
   "keywords": [],
