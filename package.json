@@ -5,7 +5,8 @@
   "scripts": {
     "test": "jest",
     "build": "rimraf ./build && tsc",
-    "release": "np --no-publish --branch=main"
+    "release": "np --no-publish --branch=main",
+    "postinstall": "npm run build"
   },
   "main": "build/index.js",
   "types": "build/index.d.ts",
