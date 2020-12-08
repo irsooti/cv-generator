@@ -25,5 +25,8 @@
     "docxtemplater": "^3.19.7",
     "lodash": "^4.17.20",
     "pizzip": "^3.0.6"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
